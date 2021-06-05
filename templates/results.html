@@ -1,0 +1,41 @@
+<html>
+<style>
+
+table {
+   
+   width: 50%;
+   height: 50%;
+   text-align: center;
+   font-size: 1.5em;
+
+   margin-left: auto;
+   margin-right: auto;
+   
+}
+tr:hover {
+   background-color: aqua;
+
+}
+th {
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+td {
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+</style>
+
+   </style>
+   <body>
+      <table border="1">
+         {% for key, value in result.items() %}
+            <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+</html>

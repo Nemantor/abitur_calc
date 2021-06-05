@@ -1,0 +1,207 @@
+<html>
+    <style>
+
+input.send {
+  width: 80%;
+  height: 2.5%;
+  background-color: deeppink;
+
+}
+
+input[type=number] {
+  width: 75%;
+  padding: 10px 0px;
+  box-sizing: border-box;
+}
+
+input.sch{
+  background-color: deepskyblue;
+  opacity: 0.7;
+}
+img {
+  display: inline;
+  padding-top: 0;
+
+  margin-left: 20%;
+  margin-right: auto;
+}
+
+h1 {
+  display: inline;
+  font-size: 2.5em;
+}
+
+sec_1 {
+  float: left;
+  padding: 10px;
+  width: 10%;
+  background-color: #cce72f;
+}
+sec_2 {
+  float: left;
+  padding: 10px;
+  width: 10%;
+  background-color: #cce72f;
+}
+
+sec_3 {
+  float: left;
+  padding: 10px;
+  width: 10%;
+  background-color: #cce72f;
+}
+sec_4 {
+  float: left;
+  padding: 10px;
+  width: 10%;
+  background-color: #f1f1f1;
+}
+sec_5 {
+  float: left;
+  padding: 10px;
+  width: 10%;
+  background-color: #f1f1f1;
+}
+sec_6 {
+  float: left;
+  padding: 10px;
+  width: 10%;
+  background-color: #f1f1f1;
+}
+sec_7 {
+  float: left;
+  padding: 10px;
+  width: 10%;
+  background-color: #eb8080;
+}
+
+
+
+
+    </style>
+    <body>
+        <h1 class="header">Enter your abitur notes</h1>
+
+        <img src="{{url_for('static', filename='bestanden.jpg')}}" width="100" height="100">
+
+        <form action="https://atlantean-force-315820.oa.r.appspot.com/results", method="POST">
+            <sec_1>
+              <p>Englisch 11/1<input type="number" name="En1"/></p>
+              <p>Englisch 11/2<input type="number" name="En2"/></p>
+              <p>Englisch 11/3<input type="number" name="En3"/></p>
+              <p>Englisch 11/4<input type="number" name="En4"/></p>
+  
+              <p>Englisch 12/1<input type="number" name="En5"/></p>
+              <p>Englisch 12/2<input type="number" name="En6"/></p>
+              <p>Englisch Abitur Note<input type="number" name="En7" class="sch"/></p>
+              <p>Englisch 12/4<input type="number" name="En8"/></p>
+            </sec_1>
+
+            <sec_2>
+            <p>Mathe 11/1<input type="number" name="Mat1"/></p>
+            <p>Mathe 11/2<input type="number" name="Mat2"/></p>
+            <p>Mathe 11/3<input type="number" name="Mat3"/></p>
+            <p>Mathe 11/4<input type="number" name="Mat4"/></p>
+
+            <p>Mathe 12/1<input type="number" name="Mat5"/></p>
+            <p>Mathe 12/2<input type="number" name="Mat6"/></p>
+            <p>Mathe Abitur Note<input type="number" name="Mat7"class="sch"/></p>
+            <p>Mathe 12/4<input type="number" name="Mat8"/></p>
+
+            </sec_2>
+
+            <sec_3>
+            <p>Deıtsch 11/1<input type="number" name="De1"/></p>
+            <p>Deıtsch 11/2<input type="number" name="De2"/></p>
+            <p>Deıtsch 11/3<input type="number" name="De3"/></p>
+            <p>Deıtsch 11/4<input type="number" name="De4"/></p>
+
+            <p>Deıtsch 12/1<input type="number" name="De5"/></p>
+            <p>Deıtsch 12/2<input type="number" name="De6"/></p>
+            <p>Deıtsch Abitur Note<input type="number" name="De7"class="sch"/></p>
+            <p>Deıtsch 12/4<input type="number" name="De8"/></p>
+
+            </sec_3>
+
+            <sec_4>
+  
+              <p>Physik 11/1<input type="number" name="Phy1"/></p>
+              <p>Physik 11/2<input type="number" name="Phy2"/></p>
+              <p>Physik 11/3<input type="number" name="Phy3"/></p>
+              <p>Physik 11/4<input type="number" name="Phy4"/></p>
+  
+              <p>Physik 12/1<input type="number" name="Phy5"/></p>
+              <p>Physik 12/2<input type="number" name="Phy6"/></p>
+              <p>Physik Abitur Note<input type="number" name="Phy7"class="sch"/></p>
+              <p>Physik 12/4<input type="number" name="Phy8"/></p>
+              </sec_4>
+
+              <sec_5>
+                <p>Biologie 11/1<input type="number" name="Bio1"/></p>
+                <p>Biologie 11/2<input type="number" name="Bio2"/></p>
+                <p>Biologie 11/3<input type="number" name="Bio3"/></p>
+                <p>Biologie 11/4<input type="number" name="Bio4"/></p>
+    
+                <p>Biologie 12/1<input type="number" name="Bio5"/></p>
+                <p>Biologie 12/2<input type="number" name="Bio6"/></p>
+                <p>Biologie Abitur Note<input type="number" name="Bio7"class="sch"/></p>
+                <p>Biologie 12/4<input type="number" name="Bio8"/></p>
+    
+                </sec_5>
+
+                <sec_6>
+                  <p>Chemie 11/1<input type="number" name="Che1"/></p>
+                  <p>Chemie 11/2<input type="number" name="Che2"/></p>
+                  <p>Chemie 11/3<input type="number" name="Che3"/></p>
+                  <p>Chemie 11/4<input type="number" name="Che4"/></p>
+      
+                  <p>Chemie 12/1<input type="number" name="Che5"/></p>
+                  <p>Chemie 12/2<input type="number" name="Che6"/></p>
+                  <p>Chemie Abitur Note<input type="number" name="Che7"class="sch"/></p>
+                  <p>Chemie 12/4<input type="number" name="Che8"/></p>
+      
+                  </sec_6>
+            
+            <sec_7>
+              <p>Schriftliche Abi</p>
+              <label for = "sch_abi"></label>
+              <select id = "sch_abi" name="sch_abi">
+                <option value="Phy">Physik</option>
+                <option value="Bio">Biologie</option>
+                <option value="Chemie">Chemie</option>
+            </select>
+            <p>1. Mündliche Abi</p>
+            <label for = "mun_1"> </label>
+            <select id = "mun_abi" name="mun_abi">
+              <option value="Phy">Physik</option>
+              <option value="Bio">Biologie</option>
+              <option value="Chemie">Chemie</option>
+          </select>
+
+          <p>2. Mündliche Abi</p>
+          <label for = "mun_2"> </label>
+          <select id = "mun2_abi" name="mun2_abi">
+            <option value = "non">Not selected</option>
+            <option value="Phy">Physik</option>
+            <option value="Bio">Biologie</option>
+            <option value="Chemie">Chemie</option>
+            <option value="En">Englisch</option>
+            <option value="Deu">Deutsch</option>
+            <option value="Mat">Matheatik</option>
+
+        </select>
+        <p>1. Mündliche Note<input type="number" name="Mun1"/></p>
+        <p>2.Mündliche Note<input type="number" name="Mun2"/></p>
+
+
+            </sec_7>
+
+            <p><input type="submit" value="submit"  class="send"/> </p>
+        </form>
+
+
+
+
+
+    </body>
+</html>
