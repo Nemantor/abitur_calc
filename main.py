@@ -1,6 +1,6 @@
 import re
 from flask import Flask
-from flask import request,render_template
+from flask import request,render_template, send_from_directory
 
 import math
 
@@ -16,7 +16,14 @@ note_table = [138, 135, 132, 129, 126, 123, 120, 117, 114, 111, 108, 105, 102, 9
 
 app = Flask(__name__)
 
+@app.route('/rickroll')
+def rickroll():
 
+    return render_template('rickroll.html')
+
+@app.route('/sitemap.xml')
+def static_from_root():
+    return send_from_directory(app.static_folder, request.path[1:])
 
 
 @app.route('/results', methods = ['POST', 'GET'])
@@ -113,7 +120,7 @@ def calculate(input_notes, selection):
             final_notes.append(weig_avg(not_lis, sch_weights))
             
         if(index > 2 and (selection['sch_abi'] == lesson) and (selection['mun_abi'] == lesson)):
-            final_notes.append((weig_avg(not_lis, mun_sch_weights) + selection['mun1'] + (2 * not_lis[6])) / 4)
+            final_notes.append((weig_avg(not_lis, mun_sch_weights) + int(selection['mun1'])) + (2 * int(not_lis[6])) / 4)
 
         if(index > 2 and (selection['sch_abi'] == lesson) and (selection['mun2_abi'] == lesson)):
             final_notes.append((weig_avg(not_lis, mun_sch_weights) + selection['mun2'] + (2 * not_lis[6])) / 4)
