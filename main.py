@@ -73,8 +73,6 @@ def results():
             result['Bestanden ?'] = 'JA'
 
 
-
-
             return render_template('results.html', result = result)
 
 
