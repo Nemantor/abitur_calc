@@ -1,10 +1,12 @@
 <html>
   <head>
-    <meta name="google-site-verification" content="H1bfvqTC94RxMgjz4nrlHcDV9QJEWKT7QIIEbg9lR5g" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abitur Hesapla</title>
+    <meta name="description" content="Abitur-hesapla size hiç olmadığı kadar kolay ve hızlı bir şekilde Abitur notlarınızı hesaplama imkanı veriyor">
+    <meta name="keywords" content="Abitur, Abitur notu, NC hesaplama, numerus clasus, alman notları" />
+
+    <title>Abitur notlarını kolay ve hızlı bir şekilde hesapla, NC puanını öğren</title>
   </head>
   <style>
     input.send {
@@ -168,7 +170,7 @@
         <p>Physik 12/1*<input type="number" name="Phy5" required/></p>
         <p>Physik 12/2*<input type="number" name="Phy6" required/></p>
         <p class="abit">
-          Physik Abitur Note<input type="number" name="Phy7" class="sch" />
+          Physik Abitur Note<input type="number" name="Phy7" class="sch" id = "phy_ab"/>
         </p>
         <p>Physik 12/4*<input type="number" name="Phy8" required/></p>
       </sec_4>
@@ -182,7 +184,7 @@
         <p>Biologie 12/1*<input type="number" name="Bio5" required/></p>
         <p>Biologie 12/2*<input type="number" name="Bio6" required/></p>
         <p class="abit">
-          Biologie Abitur Note<input type="number" name="Bio7" class="sch" />
+          Biologie Abitur Note<input type="number" name="Bio7" class="sch" id = "bio_ab"/>
         </p>
         <p>Biologie 12/4*<input type="number" name="Bio8" required/></p>
       </sec_5>
@@ -196,7 +198,7 @@
         <p>Chemie 12/1*<input type="number" name="Che5" required/></p>
         <p>Chemie 12/2*<input type="number" name="Che6" required/></p>
         <p class="abit">
-          Chemie Abitur Note<input type="number" name="Che7" class="sch" />
+          Chemie Abitur Note<input type="number" name="Che7" class="sch" id = "che_ab"/>
         </p>
         <p>Chemie 12/4*<input type="number" name="Che8" required/></p>
       </sec_6>
@@ -241,7 +243,7 @@
 
     <script>
       function validate() {
-        alert(document.getElementById("mun2_abi").value);
+
 
         if(document.getElementById("mun2_abi").value != "non") {
           if(document.getElementById("mundlich_2").value == 0) {
@@ -253,6 +255,30 @@
         else{
           document.getElementById("mundlich_2").required = false;
         }
+
+        if(document.getElementById("sch_abi").value == "Phy" && document.getElementById("phy_ab").value == 0){
+          alert("Enter Physik Abitur Note");
+          document.getElementById("phy_ab").required = true;
+          return false;
+        }
+        if(document.getElementById("sch_abi").value == "Bio" && document.getElementById("bio_ab").value == 0){
+          alert("Enter Biologie Abitur Note");
+          document.getElementById("bio_ab").required = true;
+          return false;
+        }
+        if(document.getElementById("sch_abi").value == "Chemie" && document.getElementById("che_ab").value == 0){
+          alert("Enter Chemie Abitur Note");
+          document.getElementById("che_ab").required = true;
+          return false;
+        }
+        
+
+        if(document.getElementById("mun2_abi").value == document.getElementById("mun_abi").value) {
+
+          alert("You can't select two mündliche from the same unterricht");
+          return false;
+        }
+
         return true;
       }
 

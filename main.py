@@ -21,6 +21,7 @@ def rickroll():
 
     return render_template('rickroll.html')
 
+@app.route('/robots.txt')
 @app.route('/sitemap.xml')
 def static_from_root():
     return send_from_directory(app.static_folder, request.path[1:])
@@ -123,7 +124,7 @@ def calculate(input_notes, selection):
             final_notes.append((weig_avg(not_lis, mun_sch_weights) + int(selection['mun1'])) + (2 * int(not_lis[6])) / 4)
 
         if(index > 2 and (selection['sch_abi'] == lesson) and (selection['mun2_abi'] == lesson)):
-            final_notes.append((weig_avg(not_lis, mun_sch_weights) + selection['mun2'] + (2 * not_lis[6])) / 4)
+            final_notes.append((weig_avg(not_lis, mun_sch_weights) + selection['mun2'] + (2 * int(not_lis[6]))) / 4)
 
         if(index > 2 and (selection['sch_abi'] != lesson) and (selection['mun_abi'] == lesson) and (selection['mun2_abi'] != lesson)):
             final_notes.append((weig_avg(not_lis, mun_sch_weights) + selection['mun1']) / 2)
