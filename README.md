@@ -13,4 +13,4 @@
 
 </p1>
 
-<a href "http://abitur-hesapla.gq/" target = "_blank"> Link to the website </a>
+[Link to the website](http://abitur-hesapla.gq/)
