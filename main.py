@@ -114,7 +114,7 @@ def calculate(input_notes, selection):
             final_notes.append(weig_avg(not_lis, sch_weights))
 
         if(index <= 2 and selection['mun2_abi'] == lesson):
-            final_notes.append((((weig_avg(not_lis, mun_sch_weights) + selection['mun2']) / 2)  + not_lis[6]) / 2)
+            final_notes.append((((weig_avg(not_lis, mun_sch_weights) + selection['mun2']) / 2)  + int(not_lis[6])) / 2)
         
 
         if(index > 2 and (selection['sch_abi'] == lesson) and (selection['mun_abi'] != lesson) and (selection['mun2_abi'] != lesson)):
