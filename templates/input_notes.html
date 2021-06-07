@@ -113,9 +113,9 @@
     </a>
 
     <form
-      action="/results"
-      ,
-      method="POST"
+      action="/results",
+      method="POST",
+      onsubmit="return validate()"
     >
       <sec_1>
         <p>Englisch 11/1*<input type="number" name="En1" required/></p>
@@ -229,7 +229,7 @@
           <option value="Mat">Mathematik</option>
         </select>
         <p>1. Mündliche Note*<input type="number" name="Mun1" required/></p>
-        <p>2.Mündliche Note<input type="number" name="Mun2" id ="mundlich_2" required/></p>
+        <p>2.Mündliche Note<input type="number" name="Mun2" id ="mundlich_2" /></p>
         <p class="yıldız">* Zorunlu alan</p>
       </sec_7>
 
@@ -240,9 +240,22 @@
 
 
     <script>
-      
-      
-      document.getElementById("mundlich_2").required = false;
+      function validate() {
+        alert(document.getElementById("mun2_abi").value);
+
+        if(document.getElementById("mun2_abi").value != "non") {
+          if(document.getElementById("mundlich_2").value == 0) {
+            alert("input 2.mündliche");
+            document.getElementById("mundlich_2").required = true;
+            return false;
+          }
+        }
+        else{
+          document.getElementById("mundlich_2").required = false;
+        }
+        return true;
+      }
+
 
   </script>
   </body>
