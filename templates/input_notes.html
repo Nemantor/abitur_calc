@@ -7,8 +7,26 @@
     <meta name="keywords" content="Abitur, Abitur notu, NC hesaplama, numerus clasus, alman notları" />
 
     <title>Abitur notlarını kolay ve hızlı bir şekilde hesapla, NC puanını öğren</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BV51NSJQDV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BV51NSJQDV');
+</script>
+
   </head>
   <style>
+    body {
+      background-color: #ffaa00;
+background-image: url("{{url_for('static', filename='Liquid-Cheese.svg')}}");
+background-attachment: fixed;
+background-size: cover;
+    }
+
     input.send {
       width: 78.5%;
       height: 3%;
@@ -87,7 +105,7 @@
     }
     p {
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.6em;
+      font-size: 0.75em;
     }
     p.abit {
       font-weight: bold;
@@ -96,9 +114,50 @@
       font-size: 0.5em;
     }
 
-    @media only screen and (max-width: 700px) {
-      sec_7 {
+    @media screen and (max-width: 800px) {
+      sec_1,sec_2,sec_3,sec_4,sec_5,sec_6 {
+        width: 27%;
+        height: 550px;
+        margin-bottom: 10px;
       }
+
+      sec_1{
+        border-radius: 15px 0px 0px 15px;
+      }
+      sec_3{
+        border-radius: 0px 15px 15px 0px;
+      }
+      sec_4{
+        border-radius: 15px 0px 0px 15px;
+      }
+      sec_6{
+        border-radius: 0px 15px 15px 0px;
+      }
+      
+      sec_7 {
+        width: 92.1% ;
+        float: left;
+        margin-bottom: 10px;
+        border-radius: 15px;
+      }
+
+      .mundlich{
+        display: inline-block;
+        width: 200px;
+      }
+
+
+      input.mundlich_in{
+        display: inline-block;
+        margin-left: 120px;
+      }
+      
+      input.send {
+        width: 98%;
+        height: 50px;
+        border-radius: 10px;
+      }
+
     }
   </style>
 
@@ -204,14 +263,16 @@
       </sec_6>
 
       <sec_7>
-        <p>Schriftliche Abi*</p>
+        <div class="mundlich">
+
+        <p class="mundlich">Schriftliche Abi*</p>
         <label for="sch_abi"></label>
         <select id="sch_abi" name="sch_abi">
           <option value="Phy">Physik</option>
           <option value="Bio">Biologie</option>
           <option value="Chemie">Chemie</option>
         </select>
-        <p>1. Mündliche Abi*</p>
+        <p class="mundlich">1. Mündliche Abi*</p>
         <label for="mun_1"> </label>
         <select id="mun_abi" name="mun_abi">
           <option value="Phy">Physik</option>
@@ -219,7 +280,7 @@
           <option value="Chemie">Chemie</option>
         </select>
 
-        <p>2. Mündliche Abi</p>
+        <p class="mundlich">2. Mündliche Abi</p>
         <label for="mun_2"> </label>
         <select id="mun2_abi" name="mun2_abi">
           <option value="non">Not selected</option>
@@ -230,9 +291,10 @@
           <option value="Deu">Deutsch</option>
           <option value="Mat">Mathematik</option>
         </select>
-        <p>1. Mündliche Note*<input type="number" name="Mun1" required/></p>
-        <p>2.Mündliche Note<input type="number" name="Mun2" id ="mundlich_2" /></p>
-        <p class="yıldız">* Zorunlu alan</p>
+
+        <p>1. Mündliche Note*<input type="number" class="mundlich_in" name="Mun1" required/></p>
+        <p>2.Mündliche Note<input type="number" class="mundlich_in" name="Mun2" id ="mundlich_2" /></p>
+        </div>
       </sec_7>
 
       <p class="sub"><input type="submit" value="Submit" class="send"/></p>
@@ -242,6 +304,13 @@
 
 
     <script>
+      
+      var input_lis = document.getElementsByTagName("input")
+      
+      for(var i = 0; i < input_lis.length; i++) {
+      input_lis[i].setAttribute("inputmode","decimal");
+      }
+
       function validate() {
 
 
