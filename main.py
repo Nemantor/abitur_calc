@@ -57,6 +57,22 @@ def results():
                 selections['mun1'] = int(value)
             if key == 'Mun2' and selections['mun2_abi'] != 'non':
                 selections['mun2'] = int(value)
+        
+
+        bestanden_check = True
+        print(entered_notes)
+
+        for a in range(5):
+            print(entered_notes[a][6])
+            if entered_notes[a][6] == '':
+                continue
+
+            if int(entered_notes[a][6]) == 0:
+                print("sıçtın aga")
+                bestanden_check = False
+                
+
+
 
         averages = calculate(entered_notes, selections)
 
@@ -81,7 +97,8 @@ def results():
         else:
 
             result['End Note'] = end_note
-        if end_note < 4.0:
+
+        if end_note < 4.0 and bestanden_check:
             result['Bestanden ?'] = 'JA'
         else:
             result['Bestanden ?'] = 'NEIN'
