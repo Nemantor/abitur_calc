@@ -5,10 +5,15 @@
  
   $env:FLASK_ENV = "development"   <br>
   $env:FLASK_APP = "main.py"       <br>
-  flask run
+  flask run <br>
+  <br>
+  git pull <br>
+  <br>
+  git add . <br>
+  git commit -m "MESAJ" <br>
+  git push origin main
   
-  
-  
+
 
 </p1>
 
