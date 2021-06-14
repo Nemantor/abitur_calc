@@ -3,28 +3,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Abitur-hesapla size hiç olmadığı kadar kolay ve hızlı bir şekilde Abitur notlarınızı hesaplama imkanı veriyor">
-    <meta name="keywords" content="Abitur, Abitur notu, NC hesaplama, numerus clasus, alman notları" />
+    <meta
+      name="description"
+      content="Abitur-hesapla size hiç olmadığı kadar kolay ve hızlı bir şekilde Abitur notlarınızı hesaplama imkanı veriyor"
+    />
+    <meta
+      name="keywords"
+      content="Abitur, Abitur notu, NC hesaplama, numerus clasus, alman notları"
+    />
 
-    <title>Abitur notlarını kolay ve hızlı bir şekilde hesapla, NC puanını öğren</title>
+    <title>
+      Abitur notlarını kolay ve hızlı bir şekilde hesapla, NC puanını öğren..
+    </title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BV51NSJQDV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BV51NSJQDV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-BV51NSJQDV');
-</script>
-
+      gtag("config", "G-BV51NSJQDV");
+    </script>
   </head>
   <style>
     body {
       background-color: #ffaa00;
-background-image: url("{{url_for('static', filename='Liquid-Cheese.svg')}}");
-background-attachment: fixed;
-background-size: cover;
+      background-image: url("{{url_for('static', filename='Liquid-Cheese.svg')}}");
+      background-attachment: fixed;
+      background-size: cover;
     }
 
     input.send {
@@ -38,7 +50,6 @@ background-size: cover;
       padding: 10px 0px;
       box-sizing: border-box;
       padding-left: 12px;
-      
     }
 
     input.sch {
@@ -115,52 +126,54 @@ background-size: cover;
     }
 
     @media screen and (max-width: 800px) {
-      sec_1,sec_2,sec_3,sec_4,sec_5,sec_6 {
+      sec_1,
+      sec_2,
+      sec_3,
+      sec_4,
+      sec_5,
+      sec_6 {
         width: 27%;
         height: 550px;
         margin-bottom: 10px;
       }
 
-      sec_1{
+      sec_1 {
         border-radius: 15px 0px 0px 15px;
       }
-      sec_3{
+      sec_3 {
         border-radius: 0px 15px 15px 0px;
       }
-      sec_4{
+      sec_4 {
         border-radius: 15px 0px 0px 15px;
       }
-      sec_6{
+      sec_6 {
         border-radius: 0px 15px 15px 0px;
       }
-      
+
       sec_7 {
-        width: 92.1% ;
+        width: 92.1%;
         float: left;
         margin-bottom: 10px;
         border-radius: 15px;
       }
 
-      .mundlich{
+      .mundlich {
         display: inline-block;
         width: 200px;
       }
 
-
-      input.mundlich_in{
+      input.mundlich_in {
         display: inline-block;
         margin-left: 120px;
       }
-      
+
       input.send {
         width: 98%;
         height: 50px;
         border-radius: 10px;
       }
-
     }
   </style>
-
 
   <body>
     <h1 class="header">Enter your Abitur notes:</h1>
@@ -173,185 +186,227 @@ background-size: cover;
       />
     </a>
 
-    <form
-      action="/results",
-      method="POST",
-      onsubmit="return validate()"
-    >
+    <form action="/results" , method="POST" , onsubmit="return validate()">
       <sec_1>
-        <p>Englisch 11/1*<input type="number" name="En1" required/></p>
-        <p>Englisch 11/2*<input type="number" name="En2" required/></p>
-        <p>Englisch 11/3*<input type="number" name="En3" required/></p>
-        <p>Englisch 11/4*<input type="number" name="En4" required/></p>
+        <p>Englisch 11/1*<input type="number" name="En1" required /></p>
+        <p>Englisch 11/2*<input type="number" name="En2" required /></p>
+        <p>Englisch 11/3*<input type="number" name="En3" required /></p>
+        <p>Englisch 11/4*<input type="number" name="En4" required /></p>
 
-        <p>Englisch 12/1*<input type="number" name="En5" required/></p>
-        <p>Englisch 12/2*<input type="number" name="En6" required/></p>
+        <p>Englisch 12/1*<input type="number" name="En5" required /></p>
+        <p>Englisch 12/2*<input type="number" name="En6" required /></p>
         <p class="abit">
-          Englisch Abitur Note*<input type="number" name="En7" class="sch" required/>
+          Englisch Abitur Note*<input
+            type="number"
+            name="En7"
+            class="sch"
+            required
+          />
         </p>
-        <p>Englisch 12/4*<input type="number" name="En8" required/></p>
+        <p>Englisch 12/4*<input type="number" name="En8" required /></p>
       </sec_1>
 
       <sec_2>
-        <p>Mathe 11/1*<input type="number" name="Mat1" required/></p>
-        <p>Mathe 11/2*<input type="number" name="Mat2" required/></p>
-        <p>Mathe 11/3*<input type="number" name="Mat3" required/></p>
-        <p>Mathe 11/4*<input type="number" name="Mat4" required/></p>
+        <p>Mathe 11/1*<input type="number" name="Mat1" required /></p>
+        <p>Mathe 11/2*<input type="number" name="Mat2" required /></p>
+        <p>Mathe 11/3*<input type="number" name="Mat3" required /></p>
+        <p>Mathe 11/4*<input type="number" name="Mat4" required /></p>
 
-        <p>Mathe 12/1*<input type="number" name="Mat5" required/></p>
-        <p>Mathe 12/2*<input type="number" name="Mat6" required/></p>
+        <p>Mathe 12/1*<input type="number" name="Mat5" required /></p>
+        <p>Mathe 12/2*<input type="number" name="Mat6" required /></p>
         <p class="abit">
-          Mathe Abitur Note*<input type="number" name="Mat7" class="sch" required/>
+          Mathe Abitur Note*<input
+            type="number"
+            name="Mat7"
+            class="sch"
+            required
+          />
         </p>
-        <p>Mathe 12/4*<input type="number" name="Mat8" required/></p>
+        <p>Mathe 12/4*<input type="number" name="Mat8" required /></p>
       </sec_2>
 
       <sec_3>
-        <p>Deutsch 11/1*<input type="number" name="De1" required/></p>
-        <p>Deutsch 11/2*<input type="number" name="De2" required/></p>
-        <p>Deutsch 11/3*<input type="number" name="De3" required/></p>
-        <p>Deutsch 11/4*<input type="number" name="De4" required/></p>
+        <p>Deutsch 11/1*<input type="number" name="De1" required /></p>
+        <p>Deutsch 11/2*<input type="number" name="De2" required /></p>
+        <p>Deutsch 11/3*<input type="number" name="De3" required /></p>
+        <p>Deutsch 11/4*<input type="number" name="De4" required /></p>
 
-        <p>Deutsch 12/1*<input type="number" name="De5" required/></p>
-        <p>Deutsch 12/2*<input type="number" name="De6" required/></p>
+        <p>Deutsch 12/1*<input type="number" name="De5" required /></p>
+        <p>Deutsch 12/2*<input type="number" name="De6" required /></p>
         <p class="abit">
-          Deutsch Abitur Note*<input type="number" name="De7" class="sch" required/>
+          Deutsch Abitur Note*<input
+            type="number"
+            name="De7"
+            class="sch"
+            required
+          />
         </p>
-        <p>Deutsch 12/4*<input type="number" name="De8" required/></p>
+        <p>Deutsch 12/4*<input type="number" name="De8" required /></p>
       </sec_3>
 
       <sec_4>
-        <p>Physik 11/1*<input type="number" name="Phy1" required/></p>
-        <p>Physik 11/2*<input type="number" name="Phy2" required/></p>
-        <p>Physik 11/3*<input type="number" name="Phy3" required/></p>
-        <p>Physik 11/4*<input type="number" name="Phy4" required/></p>
+        <p>Physik 11/1*<input type="number" name="Phy1" required /></p>
+        <p>Physik 11/2*<input type="number" name="Phy2" required /></p>
+        <p>Physik 11/3*<input type="number" name="Phy3" required /></p>
+        <p>Physik 11/4*<input type="number" name="Phy4" required /></p>
 
-        <p>Physik 12/1*<input type="number" name="Phy5" required/></p>
-        <p>Physik 12/2*<input type="number" name="Phy6" required/></p>
+        <p>Physik 12/1*<input type="number" name="Phy5" required /></p>
+        <p>Physik 12/2*<input type="number" name="Phy6" required /></p>
         <p class="abit">
-          Physik Abitur Note<input type="number" name="Phy7" class="sch" id = "phy_ab"/>
+          Physik Abitur Note<input
+            type="number"
+            name="Phy7"
+            class="sch"
+            id="phy_ab"
+          />
         </p>
-        <p>Physik 12/4*<input type="number" name="Phy8" required/></p>
+        <p>Physik 12/4*<input type="number" name="Phy8" required /></p>
       </sec_4>
 
       <sec_5>
-        <p>Biologie 11/1*<input type="number" name="Bio1" required/></p>
-        <p>Biologie 11/2*<input type="number" name="Bio2" required/></p>
-        <p>Biologie 11/3*<input type="number" name="Bio3" required/></p>
-        <p>Biologie 11/4*<input type="number" name="Bio4" required/></p>
+        <p>Biologie 11/1*<input type="number" name="Bio1" required /></p>
+        <p>Biologie 11/2*<input type="number" name="Bio2" required /></p>
+        <p>Biologie 11/3*<input type="number" name="Bio3" required /></p>
+        <p>Biologie 11/4*<input type="number" name="Bio4" required /></p>
 
-        <p>Biologie 12/1*<input type="number" name="Bio5" required/></p>
-        <p>Biologie 12/2*<input type="number" name="Bio6" required/></p>
+        <p>Biologie 12/1*<input type="number" name="Bio5" required /></p>
+        <p>Biologie 12/2*<input type="number" name="Bio6" required /></p>
         <p class="abit">
-          Biologie Abitur Note<input type="number" name="Bio7" class="sch" id = "bio_ab"/>
+          Biologie Abitur Note<input
+            type="number"
+            name="Bio7"
+            class="sch"
+            id="bio_ab"
+          />
         </p>
-        <p>Biologie 12/4*<input type="number" name="Bio8" required/></p>
+        <p>Biologie 12/4*<input type="number" name="Bio8" required /></p>
       </sec_5>
 
       <sec_6>
-        <p>Chemie 11/1*<input type="number" name="Che1" required/></p>
-        <p>Chemie 11/2*<input type="number" name="Che2" required/></p>
-        <p>Chemie 11/3*<input type="number" name="Che3" required/></p>
-        <p>Chemie 11/4*<input type="number" name="Che4" required/></p>
+        <p>Chemie 11/1*<input type="number" name="Che1" required /></p>
+        <p>Chemie 11/2*<input type="number" name="Che2" required /></p>
+        <p>Chemie 11/3*<input type="number" name="Che3" required /></p>
+        <p>Chemie 11/4*<input type="number" name="Che4" required /></p>
 
-        <p>Chemie 12/1*<input type="number" name="Che5" required/></p>
-        <p>Chemie 12/2*<input type="number" name="Che6" required/></p>
+        <p>Chemie 12/1*<input type="number" name="Che5" required /></p>
+        <p>Chemie 12/2*<input type="number" name="Che6" required /></p>
         <p class="abit">
-          Chemie Abitur Note<input type="number" name="Che7" class="sch" id = "che_ab"/>
+          Chemie Abitur Note<input
+            type="number"
+            name="Che7"
+            class="sch"
+            id="che_ab"
+          />
         </p>
-        <p>Chemie 12/4*<input type="number" name="Che8" required/></p>
+        <p>Chemie 12/4*<input type="number" name="Che8" required /></p>
       </sec_6>
 
       <sec_7>
         <div class="mundlich">
+          <p class="mundlich">Schriftliche Abi*</p>
+          <label for="sch_abi"></label>
+          <select id="sch_abi" name="sch_abi">
+            <option value="Phy">Physik</option>
+            <option value="Bio">Biologie</option>
+            <option value="Chemie">Chemie</option>
+          </select>
+          <p class="mundlich">1. Mündliche Abi*</p>
+          <label for="mun_1"> </label>
+          <select id="mun_abi" name="mun_abi">
+            <option value="Phy">Physik</option>
+            <option value="Bio">Biologie</option>
+            <option value="Chemie">Chemie</option>
+          </select>
 
-        <p class="mundlich">Schriftliche Abi*</p>
-        <label for="sch_abi"></label>
-        <select id="sch_abi" name="sch_abi">
-          <option value="Phy">Physik</option>
-          <option value="Bio">Biologie</option>
-          <option value="Chemie">Chemie</option>
-        </select>
-        <p class="mundlich">1. Mündliche Abi*</p>
-        <label for="mun_1"> </label>
-        <select id="mun_abi" name="mun_abi">
-          <option value="Phy">Physik</option>
-          <option value="Bio">Biologie</option>
-          <option value="Chemie">Chemie</option>
-        </select>
+          <p class="mundlich">2. Mündliche Abi</p>
+          <label for="mun_2"> </label>
+          <select id="mun2_abi" name="mun2_abi">
+            <option value="non">Not selected</option>
+            <option value="Phy">Physik</option>
+            <option value="Bio">Biologie</option>
+            <option value="Chemie">Chemie</option>
+            <option value="En">Englisch</option>
+            <option value="Deu">Deutsch</option>
+            <option value="Mat">Mathematik</option>
+          </select>
 
-        <p class="mundlich">2. Mündliche Abi</p>
-        <label for="mun_2"> </label>
-        <select id="mun2_abi" name="mun2_abi">
-          <option value="non">Not selected</option>
-          <option value="Phy">Physik</option>
-          <option value="Bio">Biologie</option>
-          <option value="Chemie">Chemie</option>
-          <option value="En">Englisch</option>
-          <option value="Deu">Deutsch</option>
-          <option value="Mat">Mathematik</option>
-        </select>
-
-        <p>1. Mündliche Note*<input type="number" class="mundlich_in" name="Mun1" required/></p>
-        <p>2.Mündliche Note<input type="number" class="mundlich_in" name="Mun2" id ="mundlich_2" /></p>
+          <p>
+            1. Mündliche Note*<input
+              type="number"
+              class="mundlich_in"
+              name="Mun1"
+              required
+            />
+          </p>
+          <p>
+            2.Mündliche Note<input
+              type="number"
+              class="mundlich_in"
+              name="Mun2"
+              id="mundlich_2"
+            />
+          </p>
         </div>
       </sec_7>
 
-      <p class="sub"><input type="submit" value="Submit" class="send"/></p>
+      <p class="sub"><input type="submit" value="Submit" class="send" /></p>
     </form>
 
     <p>Fields with (*) are required</p>
 
-
     <script>
-      
-      var input_lis = document.getElementsByTagName("input")
-      
-      for(var i = 0; i < input_lis.length; i++) {
-      input_lis[i].setAttribute("inputmode","decimal");
+      var input_lis = document.getElementsByTagName("input");
+
+      for (var i = 0; i < input_lis.length; i++) {
+        input_lis[i].setAttribute("inputmode", "decimal");
       }
 
       function validate() {
-
-
-        if(document.getElementById("mun2_abi").value != "non") {
-          if(document.getElementById("mundlich_2").value == 0) {
+        if (document.getElementById("mun2_abi").value != "non") {
+          if (document.getElementById("mundlich_2").value == 0) {
             alert("input 2.mündliche");
             document.getElementById("mundlich_2").required = true;
             return false;
           }
-        }
-        else{
+        } else {
           document.getElementById("mundlich_2").required = false;
         }
 
-        if(document.getElementById("sch_abi").value == "Phy" && document.getElementById("phy_ab").value == 0){
+        if (
+          document.getElementById("sch_abi").value == "Phy" &&
+          document.getElementById("phy_ab").value == 0
+        ) {
           alert("Enter Physik Abitur Note");
           document.getElementById("phy_ab").required = true;
           return false;
         }
-        if(document.getElementById("sch_abi").value == "Bio" && document.getElementById("bio_ab").value == 0){
+        if (
+          document.getElementById("sch_abi").value == "Bio" &&
+          document.getElementById("bio_ab").value == 0
+        ) {
           alert("Enter Biologie Abitur Note");
           document.getElementById("bio_ab").required = true;
           return false;
         }
-        if(document.getElementById("sch_abi").value == "Chemie" && document.getElementById("che_ab").value == 0){
+        if (
+          document.getElementById("sch_abi").value == "Chemie" &&
+          document.getElementById("che_ab").value == 0
+        ) {
           alert("Enter Chemie Abitur Note");
           document.getElementById("che_ab").required = true;
           return false;
         }
-        
 
-        if(document.getElementById("mun2_abi").value == document.getElementById("mun_abi").value) {
-
+        if (
+          document.getElementById("mun2_abi").value ==
+          document.getElementById("mun_abi").value
+        ) {
           alert("You can't select two mündliche from the same unterricht");
           return false;
         }
 
         return true;
       }
-
-
-  </script>
+    </script>
   </body>
 </html>
