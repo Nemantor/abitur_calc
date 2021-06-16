@@ -82,7 +82,44 @@ def results():
 
         end_note = NC_(sum_note)
 
-        print(end_note)
+        toplam = 0
+        for note in rounded_avg[0:3]:
+            toplam += note
+        
+        for index, note in enumerate(rounded_avg[3:7]):
+
+            if lessons[index + 3] == selections['sch_abi']:
+                print("eklendi")
+                toplam += note
+
+
+        if toplam < 20:
+            bestanden_check = False
+
+     
+        for index, note in enumerate(rounded_avg[3:7]):
+
+            if lessons[index + 3] == selections['mun_abi']:
+                toplam += note
+
+        if toplam < 30:
+            bestanden_check = False
+
+        sayac = 0
+        dersler_4 = []
+        for index,note in enumerate(rounded_avg):
+            if note < 5:
+                sayac += 1
+                dersler_4.append(index)
+        
+        if sayac > 2:
+            bestanden_check = False
+
+        for i in rounded_avg:
+            if i == 0:
+                bestanden_check = False
+
+
 
         result = {}
         result['Englisch End Note'] = rounded_avg[0]
