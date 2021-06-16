@@ -26,7 +26,8 @@ sec_0 {
       flex-direction: row;
       width: 350px;
       justify-content: center;
-      margin: 10px;
+      margin: 20px;
+      border-radius: 15px;
   }
 
   .row {
@@ -178,8 +179,6 @@ sec_0 {
 
     .center{
         display: flex;
-        justify-content: center;
-        text-align: center;
     }
     .center_down{
         margin-top: calc(100vh - 630px);
@@ -190,8 +189,8 @@ sec_0 {
 
     .iameg {
       display: block;
-      margin-left: auto;
-      margin-right: auto;
+      padding-top: 15px;
+      margin : 0 auto;
     }
 
     .container {
