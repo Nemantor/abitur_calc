@@ -131,6 +131,20 @@ sec_0 {
     margin-left: 3mm;
   }
 
+  .bottom{
+    background-color: #301b3f;
+    height: 25vh;
+    width: 99vw;
+    margin-left:  -8;
+    margin-bottom: -8;
+    
+}
+#bottom{
+    margin-left: 15px;
+    font-size: 1em;
+    color : #B4A5A5;
+}
+
   @media screen and (max-width: 840px) {
 
     sec_0 {
@@ -295,4 +309,6 @@ sec_0 {
         opacity: 1;
       }
     }
+
+
   }
