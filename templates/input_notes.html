@@ -38,14 +38,17 @@
 
     <link  rel = "stylesheet"  href="{{url_for('static', filename='input_notes.css')}}"/>  
 
+
   </head>
 
 
   <body>
+
     <sec_0>
       <div id="arkalık">
         <p class="başlık">Abitur-Hesapla.gq</p>
       </div>
+
       <h1 class="header">Hoşgeldiniz,</h1>
       <p class="yazı">
         Abitur notunuzu hesaplamanın yeni (ve ilk) adresi. 11 ve 12. sınıf
@@ -75,63 +78,140 @@
       />
     </a>
 
-    <form action="/results" , method="POST" , onsubmit="return validate()">
-      <sec_1>
-        <p>Englisch 11/1*<input type="number" name="En1" required /></p>
-        <p>Englisch 11/2*<input type="number" name="En2" required /></p>
-        <p>Englisch 11/3*<input type="number" name="En3" required /></p>
-        <p>Englisch 11/4*<input type="number" name="En4" required /></p>
 
-        <p>Englisch 12/1*<input type="number" name="En5" required /></p>
-        <p>Englisch 12/2*<input type="number" name="En6" required /></p>
-        <p class="abit">
-          Englisch Abitur Note*<input
+
+    <form action="/results" , method="POST" , onsubmit="return validate()">
+
+    <div class = "column" id = "group_1">
+      <div class = "row">
+        <div>
+        <label for = "En1"> Englisch 11/1*</label>
+        <input type="number" name="En1" required />
+        </div>
+        <div>
+        <label for = "En2" >Englisch 11/2*</label>
+        <input type="number" name="En2" required>
+        </div>
+        <div>
+          <label for = "En3" >Englisch 11/3*</label>
+          <input type="number" name="En3" required />
+        </div>
+        <div>
+          <label for = "En4" >Englisch 11/4*</label>
+          <input type="number" name="En3" required />
+        </div>
+        <div>
+          <label for = "En5" >Englisch 12/1*</label>
+          <input type="number" name="En3" required />
+        </div>
+        <div>
+          <label for = "En6" >Englisch 12/2*</label>
+          <input type="number" name="En3" required />
+        </div>
+
+        <div>
+        <label for = "En7"> Englisch Abitur <br> Note*</label>
+          <input
             type="number"
             name="En7"
-            class="sch"
             required
           />
-        </p>
-        <p>Englisch 12/4*<input type="number" name="En8" required /></p>
-      </sec_1>
+        </div>
 
-      <sec_2>
-        <p>Mathe 11/1*<input type="number" name="Mat1" required /></p>
-        <p>Mathe 11/2*<input type="number" name="Mat2" required /></p>
-        <p>Mathe 11/3*<input type="number" name="Mat3" required /></p>
-        <p>Mathe 11/4*<input type="number" name="Mat4" required /></p>
+        <div>
+          <label for = "En8" >Englisch 12/4*</label>
+          <input type="number" name="En8" required /></p>
+        </div>
 
-        <p>Mathe 12/1*<input type="number" name="Mat5" required /></p>
-        <p>Mathe 12/2*<input type="number" name="Mat6" required /></p>
-        <p class="abit">
-          Mathe Abitur Note*<input
+      </div>
+    
+
+
+      <div class = "row">
+        <div>
+        <label for = "En1"> Englisch 11/1*</label>
+        <input type="number" name="En1" required />
+        </div>
+        <div>
+        <label for = "En2" >Englisch 11/2*</label>
+        <input type="number" name="En2" required>
+        </div>
+        <div>
+          <label for = "En3" >Englisch 11/3*</label>
+          <input type="number" name="En3" required />
+        </div>
+        <div>
+          <label for = "En4" >Englisch 11/4*</label>
+          <input type="number" name="En3" required />
+        </div>
+        <div>
+          <label for = "En5" >Englisch 12/1*</label>
+          <input type="number" name="En3" required />
+        </div>
+        <div>
+          <label for = "En6" >Englisch 12/2*</label>
+          <input type="number" name="En3" required />
+        </div>
+
+        <div>
+        <label for = "En7"> Englisch Abitur <br> Note*</label>
+          <input
             type="number"
-            name="Mat7"
-            class="sch"
+            name="En7"
             required
           />
-        </p>
-        <p>Mathe 12/4*<input type="number" name="Mat8" required /></p>
-      </sec_2>
+        </div>
 
-      <sec_3>
-        <p>Deutsch 11/1*<input type="number" name="De1" required /></p>
-        <p>Deutsch 11/2*<input type="number" name="De2" required /></p>
-        <p>Deutsch 11/3*<input type="number" name="De3" required /></p>
-        <p>Deutsch 11/4*<input type="number" name="De4" required /></p>
+        <div>
+          <label for = "En8" >Englisch 12/4*</label>
+          <input type="number" name="En8" required /></p>
+        </div>
 
-        <p>Deutsch 12/1*<input type="number" name="De5" required /></p>
-        <p>Deutsch 12/2*<input type="number" name="De6" required /></p>
-        <p class="abit">
-          Deutsch Abitur Note*<input
+      </div>
+
+      <div class = "row">
+        <div>
+        <label for = "En1"> Englisch 11/1*</label>
+        <input type="number" name="En1" required />
+        </div>
+        <div>
+        <label for = "En2" >Englisch 11/2*</label>
+        <input type="number" name="En2" required>
+        </div>
+        <div>
+          <label for = "En3" >Englisch 11/3*</label>
+          <input type="number" name="En3" required />
+        </div>
+        <div>
+          <label for = "En4" >Englisch 11/4*</label>
+          <input type="number" name="En3" required />
+        </div>
+        <div>
+          <label for = "En5" >Englisch 12/1*</label>
+          <input type="number" name="En3" required />
+        </div>
+        <div>
+          <label for = "En6" >Englisch 12/2*</label>
+          <input type="number" name="En3" required />
+        </div>
+
+        <div>
+        <label for = "En7"> Englisch Abitur <br> Note*</label>
+          <input
             type="number"
-            name="De7"
-            class="sch"
+            name="En7"
             required
           />
-        </p>
-        <p>Deutsch 12/4*<input type="number" name="De8" required /></p>
-      </sec_3>
+        </div>
+
+        <div>
+          <label for = "En8" >Englisch 12/4*</label>
+          <input type="number" name="En8" required /></p>
+        </div>
+
+      </div>
+
+      </div>
 
       <sec_4>
         <p>Physik 11/1*<input type="number" name="Phy1" required /></p>
