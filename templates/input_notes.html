@@ -22,7 +22,7 @@
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-BV51NSJQDV"
-    ></script>
+    script/>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -32,7 +32,7 @@
 
       gtag("config", "G-BV51NSJQDV");
     </script>
-    <!-- End of google analytics script-->>
+    <!-- End of google analytics script-->
 
 
 
@@ -60,13 +60,18 @@
         Bu form Almanya'ya bağlı Auslandschule'lerin (Yurt dışı okulları)
         hesaplama cetveli göz önüne alınarak hazırlanmıştır*.
       </p>
-      <h2></h2>
+
+      <div class="center_down">
+      <span class="text">Hesaplamaya başlamak için aşağı kaydırın! </span>
+      </div>
+
+
       <div class="container">
         <div class="chevron"></div>
         <div class="chevron"></div>
         <div class="chevron"></div>
-        <span class="text">Hesaplamaya başlamak için aşağı kaydırın! </span>
       </div>
+
     </sec_0>
     <h1 class="header">Enter your Abitur notes:</h1>
 
@@ -82,6 +87,7 @@
 
     <form action="/results" , method="POST" , onsubmit="return validate()">
 
+  <div class="main_column">
     <div class = "column" id = "group_1">
       <div class = "row">
         <div>
@@ -213,64 +219,139 @@
 
       </div>
 
-      <sec_4>
-        <p>Physik 11/1*<input type="number" name="Phy1" required /></p>
-        <p>Physik 11/2*<input type="number" name="Phy2" required /></p>
-        <p>Physik 11/3*<input type="number" name="Phy3" required /></p>
-        <p>Physik 11/4*<input type="number" name="Phy4" required /></p>
 
-        <p>Physik 12/1*<input type="number" name="Phy5" required /></p>
-        <p>Physik 12/2*<input type="number" name="Phy6" required /></p>
-        <p class="abit">
-          Physik Abitur Note<input
-            type="number"
-            name="Phy7"
-            class="sch"
-            id="phy_ab"
-          />
-        </p>
-        <p>Physik 12/4*<input type="number" name="Phy8" required /></p>
-      </sec_4>
+      <div class = "column" id = "group_2">
+        <div class = "row">
+          <div>
+          <label for = "En1"> Englisch 11/1*</label>
+          <input type="number" name="En1" required />
+          </div>
+          <div>
+          <label for = "En2" >Englisch 11/2*</label>
+          <input type="number" name="En2" required>
+          </div>
+          <div>
+            <label for = "En3" >Englisch 11/3*</label>
+            <input type="number" name="En3" required />
+          </div>
+          <div>
+            <label for = "En4" >Englisch 11/4*</label>
+            <input type="number" name="En3" required />
+          </div>
+          <div>
+            <label for = "En5" >Englisch 12/1*</label>
+            <input type="number" name="En3" required />
+          </div>
+          <div>
+            <label for = "En6" >Englisch 12/2*</label>
+            <input type="number" name="En3" required />
+          </div>
+  
+          <div>
+          <label for = "En7"> Englisch Abitur <br> Note*</label>
+            <input
+              type="number"
+              name="En7"
+              required
+            />
+          </div>
+  
+          <div>
+            <label for = "En8" >Englisch 12/4*</label>
+            <input type="number" name="En8" required /></p>
+          </div>
+  
+        </div>
+      
+  
+  
+        <div class = "row">
+          <div>
+          <label for = "En1"> Englisch 11/1*</label>
+          <input type="number" name="En1" required />
+          </div>
+          <div>
+          <label for = "En2" >Englisch 11/2*</label>
+          <input type="number" name="En2" required>
+          </div>
+          <div>
+            <label for = "En3" >Englisch 11/3*</label>
+            <input type="number" name="En3" required />
+          </div>
+          <div>
+            <label for = "En4" >Englisch 11/4*</label>
+            <input type="number" name="En3" required />
+          </div>
+          <div>
+            <label for = "En5" >Englisch 12/1*</label>
+            <input type="number" name="En3" required />
+          </div>
+          <div>
+            <label for = "En6" >Englisch 12/2*</label>
+            <input type="number" name="En3" required />
+          </div>
+  
+          <div>
+          <label for = "En7"> Englisch Abitur <br> Note*</label>
+            <input
+              type="number"
+              name="En7"
+              required
+            />
+          </div>
+  
+          <div>
+            <label for = "En8" >Englisch 12/4*</label>
+            <input type="number" name="En8" required /></p>
+          </div>
+  
+        </div>
+  
+        <div class = "row">
+          <div>
+          <label for = "En1"> Englisch 11/1*</label>
+          <input type="number" name="En1" required />
+          </div>
+          <div>
+          <label for = "En2" >Englisch 11/2*</label>
+          <input type="number" name="En2" required>
+          </div>
+          <div>
+            <label for = "En3" >Englisch 11/3*</label>
+            <input type="number" name="En3" required />
+          </div>
+          <div>
+            <label for = "En4" >Englisch 11/4*</label>
+            <input type="number" name="En3" required />
+          </div>
+          <div>
+            <label for = "En5" >Englisch 12/1*</label>
+            <input type="number" name="En3" required />
+          </div>
+          <div>
+            <label for = "En6" >Englisch 12/2*</label>
+            <input type="number" name="En3" required />
+          </div>
+  
+          <div>
+          <label for = "En7"> Englisch Abitur <br> Note*</label>
+            <input
+              type="number"
+              name="En7"
+              required
+            />
+          </div>
+  
+          <div>
+            <label for = "En8" >Englisch 12/4*</label>
+            <input type="number" name="En8" required /></p>
+          </div>
+  
+        </div>
+  
+        </div>
 
-      <sec_5>
-        <p>Biologie 11/1*<input type="number" name="Bio1" required /></p>
-        <p>Biologie 11/2*<input type="number" name="Bio2" required /></p>
-        <p>Biologie 11/3*<input type="number" name="Bio3" required /></p>
-        <p>Biologie 11/4*<input type="number" name="Bio4" required /></p>
-
-        <p>Biologie 12/1*<input type="number" name="Bio5" required /></p>
-        <p>Biologie 12/2*<input type="number" name="Bio6" required /></p>
-        <p class="abit">
-          Biologie Abitur Note<input
-            type="number"
-            name="Bio7"
-            class="sch"
-            id="bio_ab"
-          />
-        </p>
-        <p>Biologie 12/4*<input type="number" name="Bio8" required /></p>
-      </sec_5>
-
-      <sec_6>
-        <p>Chemie 11/1*<input type="number" name="Che1" required /></p>
-        <p>Chemie 11/2*<input type="number" name="Che2" required /></p>
-        <p>Chemie 11/3*<input type="number" name="Che3" required /></p>
-        <p>Chemie 11/4*<input type="number" name="Che4" required /></p>
-
-        <p>Chemie 12/1*<input type="number" name="Che5" required /></p>
-        <p>Chemie 12/2*<input type="number" name="Che6" required /></p>
-        <p class="abit">
-          Chemie Abitur Note<input
-            type="number"
-            name="Che7"
-            class="sch"
-            id="che_ab"
-          />
-        </p>
-        <p>Chemie 12/4*<input type="number" name="Che8" required /></p>
-      </sec_6>
-
-      <sec_7>
+      <div class="column" id ="group_3">
         <div class="mundlich">
           <p class="mundlich">Schriftliche Abi*</p>
           <label for="sch_abi"></label>
@@ -316,9 +397,12 @@
             />
           </p>
         </div>
-      </sec_7>
+      </div>
+      </div>
+      <div class = "center">
+      <input type="submit" value="Submit" class="send" />
+      </div>
 
-      <p class="sub"><input type="submit" value="Submit" class="send" /></p>
     </form>
 
     <p class="req">Fields with (*) are required</p>
@@ -328,7 +412,7 @@
       almamaktadır.
     </p>
 
-    <script src="/static/input_notes.js"></script>
+    <script src="/input_notes.js"></script>
   </body>
 
 </html>
