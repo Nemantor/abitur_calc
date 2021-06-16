@@ -14,7 +14,7 @@ lessons = {0: 'En', 1: 'Mat', 2: 'Deu', 3: 'Phy', 4: 'Bio', 5: 'Chemie'}
 note_table = [138, 135, 132, 129, 126, 123, 120, 117, 114, 111, 108, 105, 102, 99, 96, 93, 90, 87, 84, 81, 78, 75,
               72, 69, 66, 63, 60, 57, 54, 51, 0]
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/')
 
 
 @app.route('/rickroll')
@@ -24,9 +24,10 @@ def rickroll():
 
 
 @app.route('/robots.txt')
-@app.route('/sitemap.xml')
 def static_from_root():
     return send_from_directory(app.static_folder, request.path[1:])
+
+
 
 
 @app.route('/results', methods=['POST', 'GET'])
