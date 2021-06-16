@@ -24,10 +24,17 @@ sec_0 {
   .column {
       display: flex;
       flex-direction: row;
-      width: 350px;
+      width: 450px;
       justify-content: center;
       margin: 20px;
       border-radius: 15px;
+  }
+
+  .column:nth-child(3) {
+      height: 400px;
+      width: 410px;
+      justify-content: flex-start;
+      padding-left: 40px;
   }
 
   .row {
@@ -36,11 +43,13 @@ sec_0 {
       width: 125px;
       height: auto;
       align-content: center;
+      margin: 0 5px;
 
   }
 
   .row  div {
-      margin-top: 20px;
+      margin-top: 12px;
+      margin-bottom: 12px;
       align-self: center;
   }
 
@@ -62,26 +71,30 @@ sec_0 {
 
   input.send {
     width: 78.5%;
-    height: 3%;
+    height: 6%;
     background-color: violet;
-    margin-left: 3mm;
+    border-radius: 15px;
+    margin-left: 15px;
   }
 
   input[type="number"] {
     width: 75px;
     height: 40px;
     box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 5px;
     margin-top: 5px;
   }
 
-  input.sch {
-    background-color: aqua;
-    opacity: 1;
+  #schriftlich {
+      background-color: aqua;
   }
 
+  #schriftlich_text {
+    font-weight: bold;
+}
 
   img {
-    display: inline;
     padding-top: 0;
     border-radius: 50px;
 
@@ -103,9 +116,7 @@ sec_0 {
     font-size: 0.75em;
   }
 
-  p.abit {
-    font-weight: bold;
-  }
+  
   p.yıldız {
     font-size: 0.5em;
   }
@@ -113,6 +124,7 @@ sec_0 {
   input.send:hover {
     background-color: darkviolet;
     color: whitesmoke;
+    transition: 500ms;
   }
 
   p.req {
@@ -126,9 +138,14 @@ sec_0 {
       height: 100vh;
       width: 100%;
     }
+
+    .column{
+        width: calc(100vw - 20px);
+    }
     
     #arkalık {
       background-color: rgb(87, 177, 147);
+      border-radius: 15px;
     }
 
     .main_column{
@@ -141,6 +158,7 @@ sec_0 {
       font-size: 2.5em;
       text-align: center;
       color: white;
+      padding: 10 0;
       text-shadow: 2px 1px black;
     }
 
@@ -173,12 +191,14 @@ sec_0 {
     input.send {
       width: 95%;
       height: 50px;
+      margin: 0;
       border-radius: 10px;
       
     }
 
     .center{
         display: flex;
+        justify-content: center;
     }
     .center_down{
         margin-top: calc(100vh - 630px);
