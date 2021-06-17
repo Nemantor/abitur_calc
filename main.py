@@ -61,15 +61,15 @@ def results():
         
 
         bestanden_check = True
-        print(entered_notes)
+        #print(entered_notes)
 
         for a in range(5):
-            print(entered_notes[a][6])
+            #print(entered_notes[a][6])
             if entered_notes[a][6] == '':
                 continue
 
             if int(entered_notes[a][6]) == 0:
-                print("sıçtın aga")
+                #print("sıçtın aga")
                 bestanden_check = False
                 
 
@@ -90,7 +90,7 @@ def results():
         for index, note in enumerate(rounded_avg[3:7]):
 
             if lessons[index + 3] == selections['sch_abi']:
-                print("eklendi")
+                #print("eklendi")
                 toplam += note
 
 
@@ -198,7 +198,7 @@ def calculate(input_notes, selection):
         if(index > 2 and (selection['sch_abi'] != lesson) and (selection['mun_abi'] != lesson) and (selection['mun2_abi'] != lesson)):
             final_notes.append(weig_avg(not_lis, mun_sch_weights))
 
-    print(final_notes)
+    #print(final_notes)
     return final_notes
 
 
@@ -211,8 +211,8 @@ def round(averages, input_notes, selection):
         if val > int(input_notes[i][6]):
             rounded_avg.append(math.floor(val))
 
-        print("Averaged Note : {} Abitur Note: : {}".format(
-            val, int(input_notes[i][6])))
+        #print("Averaged Note : {} Abitur Note: : {}".format(
+         #   val, int(input_notes[i][6])))
 
     for i, val in enumerate(averages[3:], start=3):
         if lessons[i] == selection['sch_abi']:
@@ -223,7 +223,7 @@ def round(averages, input_notes, selection):
         else:
             rounded_avg.append(math.ceil(val))
 
-    print(rounded_avg)
+    #print(rounded_avg)
     return rounded_avg
 
 
