@@ -1,8 +1,8 @@
 import re
 from flask import Flask
 from flask import request, render_template, send_from_directory
-
 import math
+
 
 
 sch_weights = [0.5/7, 0.5/7, 0.5/7, 0.5/7, 0.5/7, 0.5/7, 0.5, 0.5/7]
@@ -30,22 +30,44 @@ def static_from_root():
 
 
 
-
 @app.route('/results', methods=['POST', 'GET'])
 def results():
     if request.method == 'POST':
         results = request.form.to_dict().items()
+        results_ = request.form.to_dict()
 
         entered_notes = []
         temp_lis = []
+        print(results)
 
-        for key, value in results:
-            if key == 'sch_abi':
-                break
-            temp_lis.append(value)
-            if len(temp_lis) == 8:
-                entered_notes.append(temp_lis)
-                temp_lis = []
+        if results_['mod'] == 'Halb':
+            i = 0
+            for key,value in results:
+                if key == 'sch_abi':
+                    break
+                if i < 3:
+                    temp_lis.append(value)
+                    temp_lis.append(value)
+                else:
+                    temp_lis.append(value)
+                i += 1
+
+                if len(temp_lis) == 8:
+                    i = 0
+                    entered_notes.append(temp_lis)
+                    temp_lis = []
+
+        else:
+            for key, value in results:
+                if key == 'sch_abi':
+                    break
+                temp_lis.append(value)
+                if len(temp_lis) == 8:
+                    entered_notes.append(temp_lis)
+                    temp_lis = []
+
+        print(entered_notes)
+
 
         selections = {}
         for key, value in results:
@@ -148,6 +170,12 @@ def results():
 @app.route('/')
 def notes():
     return render_template('input_notes.html')
+
+
+@app.route('/input_halb')
+def results_halb():
+
+    return render_template('input_notes_halb.html')
 
 
 def weig_avg(numbers, weights):
