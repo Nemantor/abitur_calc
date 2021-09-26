@@ -167,12 +167,12 @@ def results():
         return render_template('results.html', result=result)
 
 
-@app.route('/')
+@app.route('/input_detailed')
 def notes():
     return render_template('input_notes.html')
 
 
-@app.route('/input_halb')
+@app.route('/')
 def results_halb():
 
     return render_template('input_notes_halb.html')
